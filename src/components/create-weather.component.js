@@ -22,7 +22,7 @@ export default class CreateWeather extends Component {
     onEnter(e){
         e.preventDefault();
         
-        fetch('http://api.openweathermap.org/data/2.5/weather?q='+this.state.city+'&units=metric&APPID=cd648da3327777260b63e3a221e02fbd')
+        fetch('http://api.openweathermap.org/data/2.5/weather?q='+this.state.city+'&units=metric&APPID=<key>')
         .then(res => res.json())
         .then((data) => {
             this.setState({ weatherData: data });
