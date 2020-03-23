@@ -8,9 +8,9 @@ export default class CreateWeather extends Component {
         this.onEnter = this.onEnter.bind(this)
         this.state = {
             city: '',
-            weather: '',
+            weatherDesc: '',
             temperature: 0,
-            date: '',
+            humidity: 0,
             weatherData: []
         }
     }
@@ -29,15 +29,13 @@ export default class CreateWeather extends Component {
         })
         .catch(console.log)
 
+        console.log(this.state.weatherData.main);
         // const weather = {
-        //     city: this.state.city,
-        //     weather: data.main.weather,
-        //     temp: data.main.temp,
-        //     date: data.main.date
+        //     city: this.state.weatherData.name,
+        //     weather: this.state.weatherData.weather.main,
+        //     temp: this.state.weatherData.main.temp,
+        //     humidity: this.state.weatherData.main.humidity
         // }
-          
-        //this.state.weatherData.main
-    
         //axios.post('http://localhost:5000/weathers/add', weather).then(res => console.log(res.data));
     
         //window.location = '/';

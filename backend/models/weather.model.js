@@ -7,7 +7,7 @@ const weatherSchema = new Schema(
     city: { type: String, required: true, trim: true},
     weather: { type: String },
     temp: { type: Number },
-    date: { type: Date },
+    humidity: { type: Number },
     }, 
     {    
     timestamps: true, 

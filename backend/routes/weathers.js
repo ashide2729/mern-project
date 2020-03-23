@@ -11,10 +11,10 @@ router.route('/add').post((req, res) => {
     const city = req.body.city;
     const weather = req.body.weather;
     const temp = req.body.temp;
-    const date = req.body.date;
+    const humidity = req.body.humidity;
 
     const newWeather = new Weather({
-        city, weather, temp, date,
+        city, weather, temp, humidity,
     })
 
     newWeather.save()
@@ -40,7 +40,7 @@ router.route('/update/:id').post((req, res) => {
         weathers.city = req.body.city;
         weathers.weather = req.body.weather;
         weathers.temp = req.body.temp;
-        weathers.date = req.body.date;    
+        weathers.humidity = req.body.humidity;    
 
         weathers.save()
         .then(() => res.json('Weather updated!'))
